@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок французского: Частичный артикль</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #bbdefb 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 4px dashed #4fc3f7;
+        }
+        
+        .header h1 {
+            color: #0288d1;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            color: #546e7a;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid #0288d1;
+        }
+        
+        .section h2 {
+            color: #0288d1;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        
+        .rule-box {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px solid #4fc3f7;
+        }
+        
+        .rule-title {
+            color: #0288d1;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .example {
+            background-color: #fff8e1;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #ffb300;
+            font-weight: 500;
+        }
+        
+        .text-section {
+            background-color: #f1f8e9;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 2px solid #81c784;
+        }
+        
+        .sentence {
+            padding: 15px;
+            margin: 15px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            border-left: 4px solid #43a047;
+        }
+        
+        .question {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #2e7d32;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .quiz-section {
+            background-color: #fff3e0;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #ffb74d;
+        }
+        
+        .quiz-question {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .quiz-question h3 {
+            margin-top: 0;
+            color: #ef6c00;
+        }
+        
+        .input-answer {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .input-answer:focus {
+            outline: none;
+            border-color: #4fc3f7;
+            box-shadow: 0 0 5px rgba(79, 195, 247, 0.5);
+        }
+        
+        .feedback {
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: none;
+        }
+        
+        .correct {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 2px solid #4caf50;
+        }
+        
+        .incorrect {
+            background-color: #ffebee;
+            color: #c62828;
+            border: 2px solid #f44336;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #0288d1 0%, #00acc1 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(2, 136, 209, 0.4);
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(2, 136, 209, 0.6);
+        }
+        
+        .final-task {
+            background: linear-gradient(135deg, #7e57c2 0%, #5e35b1 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .final-task h2 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .email-section {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px dashed #9e9e9e;
+        }
+        
+        .email-section p {
+            font-size: 1.1rem;
+            color: #616161;
+            margin-bottom: 15px;
+        }
+        
+        .email-address {
+            font-weight: bold;
+            color: #0288d1;
+            font-size: 1.2rem;
+            background-color: #e3f2fd;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .congrats {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #ff8a65 0%, #ff5722 100%);
+            border-radius: 15px;
+            margin-top: 30px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            display: none;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌟 Bonjour, mon élève ! 🌟</h1>
+            <p>Сегодня мы изучим частичный артикль (l'article partitif) - очень важную тему для разговоров о еде!</p>
+        </div>
+        
+        <div class="section">
+            <h2>📚 Что такое частичный артикль?</h2>
+            <p>Представьте, что вы хотите сказать "немного хлеба" или "немного воды". В английском мы говорим "some bread", "some water". Во французском для этого есть специальные артикли: <strong>du, de la, des, de l'</strong>.</p>
+            
+            <div class="rule-box">
+                <div class="rule-title">Основные правила:</div>
+                <p><strong>Мужской род:</strong> du (de + le) → du pain (немного хлеба)</p>
+                <p><strong>Женский род:</strong> de la (de + la) → de la confiture (немного варенья)</p>
+                <p><strong>Перед гласной:</strong> de l' → de l'eau (немного воды)</p>
+                <p><strong>Множественное число:</strong> des (de + les) → des légumes (немного овощей)</p>
+                
+                <div class="example">
+                    <strong>Примеры:</strong><br>
+                    Je veux du fromage. (Я хочу немного сыра.)<br>
+                    Elle boit de la limonade. (Она пьет немного лимонада.)<br>
+                    Nous mangeons des fruits. (Мы едим немного фруктов.)
+                </div>
+            </div>
+            
+            <div class="rule-box">
+                <div class="rule-title">ВАЖНО: Отрицание!</div>
+                <p>В отрицательных предложениях (ne...pas) частичный артикль <strong>du, de la, des</strong> заменяется на <strong>de</strong> (или <strong>d'</strong> перед гласной).</p>
+                
+                <div class="example">
+                    <strong>Примеры:</strong><br>
+                    Je mange du fromage. → Je ne mange pas de fromage.<br>
+                    Il boit de la limonade. → Il ne boit pas de limonade.<br>
+                    Nous prenons des croissants. → Nous ne prenons pas de croissants.
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📖 Давайте прочитаем текст вместе! "Au petit-déjeuner"</h2>
+            <p>Читаем по одному предложению. Я буду задавать вопросы на русском, чтобы проверить ваше понимание!</p>
+            
+            <div class="text-section">
+                <div class="sentence">
+                    <p><strong>Le matin, je prends toujours un petit-déjeuner.</strong></p>
+                    <div class="question">Что я всегда ем утром? (Подсказка: petit-déjeuner = завтрак)</div>
+                </div>
+                
+                <div class="sentence">
+                    <p><strong>- Je mange du pain avec du beurre et de la confiture. C'est délicieux !</strong></p>
+                    <div class="question">Что я ем на завтрак? Найдите все примеры частичного артикля в этом предложении.</div>
+                </div>
+                
+                <div class="sentence">
+                    <p><strong>- Je bois du thé ou du café. Je ne bois pas de lait.</strong></p>
+                    <div class="question">Что я пью? А что я НЕ пью? Обратите внимание на отрицательную форму!</div>
+                </div>
+                
+                <div class="sentence">
+                    <p><strong>- Parfois, je mange des céréales ou des fruits.</strong></p>
+                    <div class="question">Что я иногда ем? Какой артикль используется здесь и почему?</div>
+                </div>
+                
+                <div class="sentence">
+                    <p><strong>- Mon frère, lui, ne mange pas de pain. Il préfère des œufs.</strong></p>
+                    <div class="question">Что мой брат НЕ ест? Почему здесь используется "de pain", а не "du pain"? Что он предпочитает?</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 Практика! Викторина</h2>
+            <p>Давайте проверим, как вы усвоили материал. Я буду задавать вопросы по одному. Попробуйте ответить сами!</p>
+            
+            <div class="quiz-section">
+                <div class="quiz-question">
+                    <h3>Задание 1: Выбери правильный артикль (du, de la, des)</h3>
+                    <p>1. Je veux manger ... fromage.</p>
+                    <input type="text" class="input-answer" id="q1" placeholder="Введите ответ здесь...">
+                    <div class="feedback" id="feedback1"></div>
+                    <button onclick="checkAnswer(1)">Проверить ответ</button>
+                </div>
+                
+                <div class="quiz-question">
+                    <p>2. Elle achète ... eau minérale.</p>
+                    <input type="text" class="input-answer" id="q2" placeholder="Введите ответ здесь...">
+                    <div class="feedback" id="feedback2"></div>
+                    <button onclick="checkAnswer(2)">Проверить ответ</button>
+                </div>
+                
+                <div class="quiz-question">
+                    <p>3. Nous préparons ... pâtes pour le dîner.</p>
+                    <input type="text" class="input-answer" id="q3" placeholder="Введите ответ здесь...">
+                    <div class="feedback" id="feedback3"></div>
+                    <button onclick="checkAnswer(3)">Проверить ответ</button>
+                </div>
+                
+                <div class="quiz-question">
+                    <p>4. Tu bois ... jus d'orange ?</p>
+                    <input type="text" class="input-answer" id="q4" placeholder="Введите ответ здесь...">
+                    <div class="feedback" id="feedback4"></div>
+                    <button onclick="checkAnswer(4)">Проверить ответ</button>
+                </div>
+                
+                <div class="quiz-question">
+                    <h3>Задание 2: Поставь артикль в отрицательной форме</h3>
+                    <p>5. Je mange de la salade. → Je ne mange pas ___ salade.</p>
+                    <input type="text" class="input-answer" id="q5" placeholder="Введите ответ здесь...">
+                    <div class="feedback" id="feedback5"></div>
+                    <button onclick="checkAnswer(5)">Проверить ответ</button>
+                </div>
+                
+                <div class="quiz-question">
+                    <p>6. Il achète du chocolat. → Il n'achète pas ___ chocolat.</p>
+                    <input type="text" class="input-answer" id="q6" placeholder="Введите ответ здесь...">
+                    <div class="feedback" id="feedback6"></div>
+                    <button onclick="checkAnswer(6)">Проверить ответ</button>
+                </div>
+                
+                <div class="quiz-question">
+                    <p>7. Nous prenons des croissants. → Nous ne prenons pas ___ croissants.</p>
+                    <input type="text" class="input-answer" id="q7" placeholder="Введите ответ здесь...">
+                    <div class="feedback" id="feedback7"></div>
+                    <button onclick="checkAnswer(7)">Проверить ответ</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="email-section">
+            <p>Все ваши ответы будут автоматически отправлены на почту:</p>
+            <div class="email-address">mamasflower@vk.com</div>
+            <p>Так вы сможете сохранить свои ответы для дальнейшего изучения!</p>
+        </div>
+        
+        <div class="final-task">
+            <h2>✏️ Ваша очередь! Создайте свои предложения</h2>
+            <p>Напишите 2 предложения о том, что вы едите и пьете (или не едите/не пьете) на завтрак, используя частичный артикль и его отрицательную форму.</p>
+            <p>Пример: <em>"Je mange du pain. Je ne bois pas de café."</em></p>
+            <textarea class="input-answer" id="userSentence1" placeholder="Первое предложение (утвердительное)" style="height: 80px; margin: 15px 0;"></textarea>
+            <textarea class="input-answer" id="userSentence2" placeholder="Второе предложение (отрицательное)" style="height: 80px; margin: 15px 0;"></textarea>
+            <button onclick="checkSentences()">Проверить мои предложения!</button>
+        </div>
+        
+        <div class="congrats" id="congratsMessage">
+            🎉 Поздравляю! Вы отлично справились с уроком! 🎉
+            <br><br>
+            Вы сделали большой шаг в изучении французского языка! Продолжайте практиковаться!
+        </div>
+    </div>
+    
+    <script>
+        // Correct answers for the quiz
+        const correctAnswers = {
+            1: 'du',
+            2: 'de l\'',
+            3: 'des',
+            4: 'du',
+            5: 'de',
+            6: 'de',
+            7: 'de'
+        };
+        
+        // Function to check individual answers
+        function checkAnswer(questionNum) {
+            const userAnswer = document.getElementById(`q${questionNum}`).value.trim().toLowerCase();
+            const feedbackElement = document.getElementById(`feedback${questionNum}`);
+            
+            if (userAnswer === '') {
+                feedbackElement.innerHTML = "Пожалуйста, введите ответ!";
+                feedbackElement.className = 'feedback incorrect';
+                feedbackElement.style.display = 'block';
+                return;
+            }
+            
+            if (userAnswer === correctAnswers[questionNum]) {
+                feedbackElement.innerHTML = "✅ Правильно! Très bien!";
+                feedbackElement.className = 'feedback correct';
+                feedbackElement.style.display = 'block';
+                
+                // Send answer to email
+                sendToEmail(questionNum, userAnswer, true);
+            } else {
+                feedbackElement.innerHTML = `❌ Не совсем. Правильный ответ: ${correctAnswers[questionNum]}`;
+                feedbackElement.className = 'feedback incorrect';
+                feedbackElement.style.display = 'block';
+                
+                // Send answer to email
+                sendToEmail(questionNum, userAnswer, false);
+            }
+        }
+        
+        // Function to check user sentences
+        function checkSentences() {
+            const sentence1 = document.getElementById('userSentence1').value.trim();
+            const sentence2 = document.getElementById('userSentence2').value.trim();
+            
+            if (sentence1 === '' || sentence2 === '') {
+                alert("Пожалуйста, напишите оба предложения!");
+                return;
+            }
+            
+            // Send sentences to email
+            sendSentencesToEmail(sentence1, sentence2);
+            
+            // Simple check for partitive articles
+            const partitiveArticles = ['du ', 'de la ', 'de l\'', 'des '];
+            const negativeForm = 'de ';
+            
+            let hasPartitive = false;
+            let hasNegative = false;
+            
+            for (let article of partitiveArticles) {
+                if (sentence1.toLowerCase().includes(article)) {
+                    hasPartitive = true;
+                    break;
+                }
+            }
+            
+            if (sentence2.toLowerCase().includes('ne ') && sentence2.toLowerCase().includes(' pas ') && 
+                (sentence2.toLowerCase().includes(' de ') || sentence2.toLowerCase().includes(' d\''))) {
+                hasNegative = true;
+            }
+            
+            if (hasPartitive && hasNegative) {
+                alert("🌟 Отлично! Вы правильно использовали частичный артикль и его отрицательную форму! Продолжайте в том же духе!");
+                document.getElementById('congratsMessage').style.display = 'block';
+            } else if (hasPartitive) {
+                alert("Хорошо! Вы использовали частичный артикль в первом предложении. Во втором предложении попробуйте использовать отрицательную форму с 'ne...pas' и 'de'.");
+            } else if (hasNegative) {
+                alert("Хорошо! Вы использовали отрицательную форму во втором предложении. В первом предложении попробуйте использовать частичный артикль (du, de la, des, de l').");
+            } else {
+                alert("Попробуйте включить частичный артикль (du, de la, des, de l') в первое предложение и отрицательную форму с 'de' во второе предложение.");
+            }
+        }
+        
+        // Function to send answers to email
+        function sendToEmail(questionNum, userAnswer, isCorrect) {
+            // In a real implementation, this would send data to a server
+            // that would then email the results to mamasflower@vk.com
+            console.log(`Sending to mamasflower@vk.com - Question ${questionNum}: ${userAnswer} (Correct: ${isCorrect})`);
+        }
+        
+        // Function to send user sentences to email
+        function sendSentencesToEmail(sentence1, sentence2) {
+            // In a real implementation, this would send data to a server
+            // that would then email the results to mamasflower@vk.com
+            console.log(`Sending to mamasflower@vk.com - Sentence 1: ${sentence1}`);
+            console.log(`Sending to mamasflower@vk.com - Sentence 2: ${sentence2}`);
+        }
+    </script>
+</body>
+</html>
